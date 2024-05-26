@@ -90,10 +90,14 @@
             <h2>Comments</h2>
             <form method="post" action="{{url('/commentsubmit')}}">
                 @csrf
+
+
+
             <div class="form-group">
                 <label for="comment">Leave a comment:</label>
                 <textarea class="form-control" id="comment" rows="3" name="comment"></textarea>
             </div>
+            
             <div class="form-group">
                 <button class="btn btn-primary mt-2" type="submit" name="submit">Submit</button>
             </div>

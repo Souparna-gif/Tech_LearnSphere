@@ -7,7 +7,7 @@ function sendMessage() {
         userMessage.className = 'user-message';
         userMessage.textContent = message;
         messagesDiv.appendChild(userMessage);
-        userInput.value = 'Bapi';
+        userInput.value = '';
 
         const responses = [
             [["hi", "hey", "hello"], ["Hello!", "Hi!", "Hey!", "Hi there!"]],

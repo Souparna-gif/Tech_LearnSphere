@@ -71,16 +71,9 @@ Route::get('/unblock{ublk}',[LoginController::class,'unblock']);
 Route::get('/comment',[LoginController::class,'comment_index']);
 Route::post('/commentsubmit',[LoginController::class,'comment_data']);
 
-Route::get('/buy-now', [LoginController::class,'buyNow']);
 
-
-// routes/web.php
-
-Route::post('/home', [LoginController::class,'subscribe']);
 
 //payment
-
-
 Route::get('/payment', [PaymentController::class, 'showPaymentPage'])->name('payment.page');
 Route::post('/payment/order', [PaymentController::class, 'createOrder'])->name('payment.order');
 Route::post('/payment/success', [PaymentController::class, 'handleSuccess'])->name('payment.success');
