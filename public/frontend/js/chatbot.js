@@ -3,10 +3,14 @@ function sendMessage() {
     const message = userInput.value.trim();
     if (message) {
         const messagesDiv = document.getElementById('messages');
+
+        // User message
         const userMessage = document.createElement('div');
-        userMessage.className = 'user-message';
+        userMessage.className = 'message-left'; // CSS class for left side
         userMessage.textContent = message;
         messagesDiv.appendChild(userMessage);
+
+        // Clear input
         userInput.value = '';
 
         const responses = [
@@ -46,10 +50,10 @@ function sendMessage() {
             }
         }
 
-        // Simulate bot response (for demo purposes)
+        // Bot response
         setTimeout(() => {
             const botMessage = document.createElement('div');
-            botMessage.className = 'bot-message';
+            botMessage.className = 'message-right'; // CSS class for right side
             botMessage.textContent = botResponse;
             messagesDiv.appendChild(botMessage);
             messagesDiv.scrollTop = messagesDiv.scrollHeight;

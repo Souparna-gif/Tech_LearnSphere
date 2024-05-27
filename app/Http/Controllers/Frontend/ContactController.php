@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class ContactController extends Controller
 {
-    
+
     public function index(){
         $name=session()->get('name');
         $image=session()->get('image');
@@ -38,11 +38,10 @@ class ContactController extends Controller
         ];
 
         $data_table=DB::table('contact')->insert($data);
-        dd($data_table);
+        return view('frontend.contactus');
+        //dd($data_table);
         //return view('form')->with(['userInfo'=>$data]);
         //return redirect('/display');
     }
-
-
-    }
+}
 

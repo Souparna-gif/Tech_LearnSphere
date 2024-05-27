@@ -50,6 +50,7 @@ Route::post('/login_user',[LoginController::class,'login_data']);
 Route::get('/contact',[ContactController::class,'index']);
 Route::post('/contactus',[ContactController::class,'contact_data']);
 
+
 Route::get("/edit{ep}",[SignupController::class,"data_edit"]);
 Route::post("/update",[SignupController::class,"data_update"]);
 
